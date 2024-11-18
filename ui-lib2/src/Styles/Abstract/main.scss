@@ -1,0 +1,9 @@
+@use 'Root-Components/hsl-colors' as *;
+@use 'Root-Components/colors' as *;
+@use 'Root-Components/colors-gradient' as *;
+
+$root: (
+  hsl-color: $hsl-colors,
+  color: $colors,
+  color-gradients: $color-gradients
+);

@@ -1,0 +1,9 @@
+@use 'sass:map';
+
+@use 'hsl-colors' as *;
+
+$colors: ();
+
+@each $nameColor, $color in $hsl-colors {
+  $colors: map.set($colors, $nameColor, hsl($color));
+}

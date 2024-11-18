@@ -1,0 +1,31 @@
+//!BG, BORDERS, TEXT-COLORS, DISPLAYS LINK, UNDERLINE, OPACITY, POSITION, SHADOW, SIZING, TEXT, VIZIBILITY, SPACES, HOVER and ACTIVE
+
+$utils: (
+  background-color: (
+    shortcut: 'bg',
+    styles: (
+      background-color: color
+    )
+  ),
+  backround-gradient: (
+    shortcut: 'bg-gradient',
+    styles: (
+      background-image: color-gradients
+    )
+  ),
+  background-opacity: (
+    shortcut: 'bg-opacity',
+    requires: (
+      background-color or background-gradient
+    ),
+    styles: (
+      
+    )
+  )
+  //border: (
+  //  shortcut: 'border',
+  //  styles: (
+  //    border: border
+  //  )
+  //)
+);
