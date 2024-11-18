@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--CEO tags-->
+    <meta name="author" content="Vadim Medvedev">
+    <meta name="descriptions" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Document</title>
+    <link rel="preload" href="./css/main.css" as="style" onload="this.rel = 'stylesheet'">
+    <!--<link rel="shortcut icon" href="" type="image/x-icon">-->
+</head>
+
+<body>
+
+<!--SVG ICON-->
+<svg display="none">
+    <symbol viewBox="0 0 32 32" id="logo-icon">
+        <g>
+            <path d="M29.7,16c0-1.9-2.2-3.5-5.7-4.5C24.9,8,24.6,5.3,23,4.3C22.6,4.1,22.2,4,21.7,4c-1.5,0-3.5,1.1-5.5,3c-2-1.9-3.9-3-5.5-3   c-0.5,0-0.9,0.1-1.3,0.3C7.9,5.3,7.6,8,8.4,11.5c-3.4,1-5.7,2.7-5.7,4.5c0,1.9,2.2,3.5,5.7,4.5c-0.8,3.5-0.5,6.3,1.1,7.2   c0.4,0.2,0.8,0.3,1.3,0.3c1.5,0,3.5-1.1,5.5-3c2,1.9,3.9,3,5.5,3c0.5,0,0.9-0.1,1.3-0.3c1.6-0.9,1.9-3.7,1.1-7.2   C27.5,19.5,29.7,17.8,29.7,16z M21.7,5.3c0.3,0,0.5,0,0.6,0.2c0.8,0.4,1.1,2,0.8,4.1c-0.1,0.5-0.2,1.1-0.3,1.6   c-1.1-0.3-2.2-0.4-3.5-0.6c-0.7-1-1.4-1.9-2.2-2.7C18.9,6.2,20.6,5.3,21.7,5.3z M19.9,18.1c-0.4,0.7-0.8,1.4-1.3,2   c-0.8,0.1-1.6,0.1-2.4,0.1c-0.8,0-1.6,0-2.4-0.1c-0.4-0.6-0.8-1.3-1.3-2c-0.4-0.7-0.8-1.4-1.1-2.1c0.3-0.7,0.7-1.4,1.1-2.1   c0.4-0.7,0.9-1.4,1.3-2.1c0.8-0.1,1.6-0.1,2.4-0.1c0.8,0,1.6,0,2.4,0.1c0.4,0.6,0.9,1.3,1.3,2.1c0.4,0.7,0.8,1.4,1.1,2.1   C20.7,16.7,20.3,17.4,19.9,18.1z M21.7,17.5c0.3,0.7,0.5,1.4,0.7,2c-0.7,0.2-1.4,0.3-2.1,0.4c0.2-0.4,0.5-0.8,0.7-1.2   C21.3,18.4,21.5,17.9,21.7,17.5L21.7,17.5z M16.2,23.2c-0.5-0.5-1-1.1-1.4-1.7c0.5,0,1,0,1.4,0c0.5,0,1,0,1.4,0   C17.2,22.1,16.7,22.7,16.2,23.2z M12.1,20c-0.7-0.1-1.4-0.2-2.1-0.4c0.2-0.7,0.5-1.4,0.7-2c0.2,0.4,0.4,0.8,0.7,1.2   C11.7,19.2,11.9,19.6,12.1,20L12.1,20z M10.7,14.5c-0.3-0.7-0.5-1.4-0.8-2.1c0.7-0.2,1.4-0.3,2.2-0.4c-0.3,0.4-0.5,0.8-0.8,1.2   C11.2,13.7,11,14.1,10.7,14.5z M16.2,8.8c0.5,0.5,0.9,1.1,1.4,1.6c-0.5,0-0.9,0-1.4,0c-0.5,0-0.9,0-1.4,0   C15.3,9.9,15.8,9.3,16.2,8.8z M21,13.2c-0.3-0.4-0.5-0.8-0.8-1.2c0.8,0.1,1.5,0.2,2.2,0.4c-0.2,0.7-0.5,1.4-0.8,2.1   C21.5,14.1,21.3,13.7,21,13.2z M9.4,9.5c-0.3-2.1,0-3.6,0.8-4.1c0.2-0.1,0.4-0.2,0.6-0.2c1.1,0,2.7,0.9,4.5,2.6   c-0.7,0.8-1.5,1.7-2.2,2.7c-1.2,0.1-2.4,0.3-3.5,0.6C9.5,10.6,9.4,10,9.4,9.5z M7.2,18.7C5.3,17.9,4,16.8,4,16   c0-0.9,1.2-1.9,3.1-2.7c0.5-0.2,1-0.4,1.6-0.5c0.3,1.1,0.7,2.2,1.3,3.3c-0.5,1.1-0.9,2.2-1.2,3.2C8.2,19.1,7.7,18.9,7.2,18.7   L7.2,18.7z M10.1,26.6c-0.8-0.4-1.1-2-0.8-4.1c0.1-0.5,0.2-1.1,0.3-1.7c1.1,0.2,2.2,0.4,3.4,0.5c0.7,1,1.5,1.9,2.2,2.7   c-1.8,1.7-3.4,2.6-4.5,2.6C10.5,26.7,10.3,26.6,10.1,26.6L10.1,26.6z M23.1,22.5c0.3,2.1,0,3.6-0.8,4.1c-0.2,0.1-0.4,0.2-0.6,0.2   c-1.1,0-2.7-0.9-4.5-2.6c0.8-0.8,1.5-1.7,2.2-2.7c1.2-0.1,2.4-0.3,3.4-0.5C22.9,21.4,23,21.9,23.1,22.5L23.1,22.5z M25.3,18.7   c-0.5,0.2-1,0.4-1.6,0.5c-0.3-1-0.7-2.1-1.2-3.2c0.5-1.1,0.9-2.2,1.3-3.3c0.5,0.2,1.1,0.3,1.6,0.5c1.9,0.8,3.1,1.8,3.1,2.7   C28.4,16.8,27.2,17.9,25.3,18.7L25.3,18.7z"/>
+            <path d="M16.3,18.5c1.4,0,2.5-1.1,2.5-2.5s-1.1-2.5-2.5-2.5s-2.5,1.1-2.5,2.5S14.9,18.5,16.3,18.5z"/>
+        </g>
+    </symbol>
+</svg>
+<!--SVG ICON-->
+
+<div class="wrapper">
+    <svg class="main-logo">
+        <use xlink:href="#logo-icon"></use>
+    </svg>
+    <main>
+        <section>
+            <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorum eaque maiores,
+                molestias porro qui quo ut? Aliquid consequuntur doloremque perferendis sed tempore veritatis! Aliquam
+                asperiores aut ducimus eius excepturi facere repellat sequi tempora vel? Ab assumenda cum delectus,
+                distinctio expedita hic id impedit magni, molestiae nemo officia, ut voluptate voluptatibus? Aliquid
+                architecto assumenda corporis cupiditate dolore error est fuga fugit, inventore ipsa iusto maxime modi
+                nam neque obcaecati porro provident quisquam, ratione reiciendis repellat repudiandae saepe sint sit
+                totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti illum libero quisquam.
+                Consequuntur, nobis voluptatibus! Alias aliquid corporis deleniti doloremque doloribus eveniet expedita,
+                fuga ipsa itaque nisi omnis, possimus repellendus tenetur vitae voluptatem! Amet autem beatae commodi
+                consequatur culpa cupiditate deleniti dicta dignissimos dolor dolorem eaque eos error facere fugit harum
+                laboriosam minima nihil nisi non officiis perferendis quia quo quos repellendus reprehenderit sequi,
+                sunt vero! Ad animi assumenda cupiditate ea et impedit, ipsam iusto labore laudantium, maxime
+                necessitatibus officiis omnis repellat sequi suscipit vel velit. Commodi eveniet ipsa nostrum. Aliquid
+                autem labore mollitia numquam vitae. Autem error, harum ipsam laborum nulla numquam perspiciatis quia
+                quidem repellat veritatis! Accusantium autem cum cumque cupiditate explicabo fuga, incidunt itaque nobis
+                non perspiciatis repellendus sed similique velit? Assumenda beatae commodi cupiditate, deserunt
+                doloribus excepturi explicabo id modi nesciunt sed tempore velit voluptatibus! Accusantium aliquid amet
+                aspernatur culpa doloremque earum eius, eos ex exercitationem iure obcaecati odio reprehenderit soluta
+                tempore totam voluptates voluptatum. Ab iste nam rem? Adipisci aliquam aspernatur consectetur cumque,
+                doloremque eaque exercitationem fuga, hic, molestias neque nobis provident reiciendis rerum vitae
+                voluptates. Autem deleniti est illo ipsa neque qui repellendus vero voluptas. A autem deserunt fugit,
+                illo minima nemo tenetur vero.</p>
+        </section>
+        <section>
+            <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur, facilis
+                fuga iste quis rerum tempore voluptas. A ab animi atque aut autem beatae blanditiis consectetur cum
+                delectus distinctio, dolorem ea eligendi illo incidunt ipsam minus modi nemo nesciunt nulla officia
+                officiis provident quidem quisquam rem repellendus reprehenderit sed totam? Aliquid, aperiam asperiores
+                at consequuntur distinctio esse, harum id impedit labore mollitia officia optio possimus quasi saepe
+                sapiente tenetur voluptates! Architecto corporis illum minus molestias quibusdam quidem quo veniam!
+                Doloremque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut, deleniti deserunt,
+                dignissimos et, ipsum iste magni mollitia praesentium quidem tempora ullam! Adipisci aliquam aliquid
+                amet animi at autem consequatur cum cumque dolor dolorem ducimus eaque eum eveniet facere fuga,
+                inventore laborum libero maxime minima nisi possimus quasi quos rem repellendus reprehenderit
+                repudiandae sequi soluta vel velit veniam vero voluptatem voluptatibus, voluptatum? Ad aliquid commodi,
+                odio placeat quidem quis vero! Autem possimus repellat veritatis voluptatibus voluptatum! Accusantium,
+                animi at aut delectus distinctio dolore eaque esse eum excepturi facilis harum iure iusto libero magni,
+                maiores minima modi mollitia nobis nostrum nulla numquam odio officia officiis perspiciatis placeat,
+                porro quis reprehenderit saepe sapiente similique soluta sunt suscipit voluptas! Aliquam animi
+                asperiores beatae cumque debitis dolor eius esse est explicabo facilis in ipsam laudantium libero nulla
+                perspiciatis porro, quia quibusdam quo recusandae reiciendis reprehenderit tempora unde ut velit
+                veritatis voluptatem voluptates voluptatibus. Alias aliquam commodi consequatur cupiditate deleniti
+                deserunt dignissimos dolorum earum eius enim est expedita, explicabo fugiat harum hic iste iusto
+                mollitia obcaecati perferendis porro quidem quo quos saepe similique sit sunt veniam voluptatibus. Ad
+                asperiores at deserunt eius eum exercitationem, ipsum iusto libero nobis officiis, porro quasi, quo
+                repellendus sequi sint.</p>
+        </section>
+        <section>
+            <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate doloribus
+                ducimus earum nam necessitatibus non nostrum quas quis quisquam quos, sequi similique sint, tempore
+                voluptatibus. Adipisci hic illum nisi suscipit. Asperiores, cum delectus deleniti dolor doloremque ea
+                eius eum ex excepturi explicabo facere id illum impedit ipsa libero minus molestiae molestias mollitia
+                odio provident, quaerat quas quidem quod reprehenderit, sapiente soluta suscipit unde? Ad aliquam
+                assumenda beatae culpa cupiditate deleniti dolore error iste nihil nisi nobis nostrum quod, tempora.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aperiam cumque eligendi
+                exercitationem ipsa iste maiores non obcaecati repellendus. Blanditiis consequatur id impedit labore
+                totam voluptatem. Dolore facere nesciunt nostrum nulla pariatur quam sequi totam veniam vitae
+                voluptatum. Autem dolore doloribus earum, fugit incidunt ipsa laboriosam laudantium modi molestiae
+                nesciunt nisi non obcaecati odit perferendis possimus provident, quos repudiandae! Aspernatur
+                consequatur corporis deserunt excepturi harum incidunt ipsa labore qui, quibusdam reiciendis suscipit
+                totam vero voluptatum. Adipisci animi asperiores aut, culpa dolorum error esse est facilis magnam
+                maiores modi nisi nobis officia, optio perferendis placeat quaerat, quam ratione rem repudiandae
+                similique sunt tenetur totam veritatis voluptas. Deleniti dicta dolorem harum id, incidunt, libero natus
+                nobis, optio pariatur provident quisquam quo rerum sed tempore ullam. Ad asperiores consequatur
+                distinctio eaque est fugit ipsam, magnam nobis obcaecati! Accusamus ad adipisci animi, atque consequatur
+                dolorem doloribus enim eveniet ex, exercitationem fugiat impedit ipsa ipsum iure laboriosam nostrum
+                officiis optio, placeat quas quis ratione reiciendis rem similique sunt temporibus veniam voluptas
+                voluptatibus! Aut debitis eius et ipsam neque similique tenetur voluptatibus? Blanditiis doloribus illum
+                iure maxime quae, quis similique. Autem deserunt dignissimos possimus sunt. Animi architecto blanditiis
+                consequatur corporis eius enim incidunt sed tempora.</p>
+        </section>
+        <section>
+            <p class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorem doloremque fugit
+                iure nihil possimus quo similique? Doloremque expedita magni nulla suscipit. A alias, architecto autem
+                cumque deleniti dicta dolores eos hic impedit incidunt magnam officia omnis, placeat porro quaerat quia
+                sapiente sint tempora voluptate voluptatibus. Asperiores consequuntur culpa deleniti dignissimos est ex
+                excepturi iste, magni neque numquam, perferendis perspiciatis, porro provident quis repellat sequi sit
+                tempore! Dignissimos incidunt iure laboriosam modi non quod. Aliquid commodi nesciunt quasi soluta
+                voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio excepturi expedita natus
+                numquam quis? Ab aspernatur dolores eum expedita hic impedit, laborum magnam nisi odit perferendis quis,
+                sapiente sequi tempora vero vitae, voluptate voluptatem voluptatum? Assumenda commodi distinctio illo in
+                odit quaerat quia quisquam repudiandae, sequi soluta. Beatae debitis dolorum, eos minima neque odit
+                voluptatibus. Cum distinctio hic in ipsam neque tempora temporibus? Beatae, delectus eum facere fugit,
+                harum incidunt ipsum minus neque nesciunt non numquam odio officia optio placeat possimus praesentium
+                quae quam quasi sapiente sint sunt, vel voluptates! Deleniti illum maxime numquam pariatur quo ratione
+                recusandae tenetur ut! Libero quod, totam? Aliquid exercitationem ipsum neque quae ut vel vitae. Ab
+                dolorem impedit molestiae non! At autem corporis distinctio earum est ex fuga inventore neque porro
+                voluptatem? Consequuntur, libero, voluptate! Asperiores deleniti distinctio possimus quasi quibusdam
+                tempora voluptatem voluptatum. Accusamus accusantium aspernatur corporis deserunt dolores esse facilis
+                harum illo inventore maxime minima molestias necessitatibus nostrum optio perferendis perspiciatis,
+                porro quas quidem repudiandae suscipit tenetur ut veniam veritatis! Architecto aspernatur dolores ea
+                enim ipsa mollitia nulla porro quia! Aliquam consequuntur deserunt dicta error, eveniet facere fuga
+                ipsam itaque, iusto laborum, modi quia quis? Accusamus aliquam ea eos facere, quas sint.</p>
+        </section>
+    </main>
+</div>
+
+<script src="./script/_main/index.js"></script>
+</body>
+
+</html>

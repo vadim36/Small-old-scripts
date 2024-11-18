@@ -1,0 +1,17 @@
+@use '../abstract' as var;
+
+.container-accordions {
+  width: var.$containerWidth;
+  height: 100%;
+
+  margin: 0 auto;
+
+  outline: var.$containerOutline;
+  border: var.$containerBorder;
+  border-radius: var.$containerBorderRadius;
+  background: var.$containerBackground;
+
+  @if (var.$containerBackground == #000) {
+    color: #fff;
+  }
+}

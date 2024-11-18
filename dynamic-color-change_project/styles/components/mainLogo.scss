@@ -1,0 +1,31 @@
+@use '../abstract' as var;
+
+.main-logo {
+  width: var.$mainLogoWidth;
+
+  fill: var.$main;
+  mix-blend-mode: difference;
+
+  @media (width > 1000px) {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+}
+
+/*h1 {
+  display: inline;
+  margin-left: var.$mainTitleMarginLeft;
+
+  color: var.$main;
+  font-weight: 900;
+  font-size: var.$mainTitleFontSize;
+
+  mix-blend-mode: difference;
+
+  @media (width > 1000px) {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+}*/

@@ -1,0 +1,58 @@
+@use '../abstract' as var;
+
+.panel__title {
+  display: flex;
+
+  h2 {
+    flex: 1 1 auto;
+  }
+}
+
+.panel__close-icon {
+  width: var.$panelCloseIconSize;
+  height: var.$panelCloseIconSize;
+
+  transition: ease-in-out 0.35s;
+
+  &[aria-expanded="false"] {
+    transform: rotate(90deg);
+  }
+
+  @media (max-width: 550px) {
+    width: var.$panelCloseIconSize * 0.75;
+    height: var.$panelCloseIconSize * 0.75;
+  }
+}
+
+.panel__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .5s;
+
+  &[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  > div {
+    overflow: hidden;
+  }
+}
+
+.panel + .panel {
+  border-top: var.$containerBorder;
+}
+
+h2 {
+  @include var.title(var.$panelTitleFontSize);
+
+  user-select: none;
+}
+
+.panel__subtitle {
+  padding: var.$panelSubtitlePadding;
+  font-size: var.$panelSubtitleFontSize;
+
+  @media (max-width: 550px) {
+    font-size: var.$panelSubtitleFontSize * 1.25;
+  }
+}

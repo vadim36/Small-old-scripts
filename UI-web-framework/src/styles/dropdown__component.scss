@@ -1,0 +1,101 @@
+@use '../abstract/styles/root.scss' as *;
+@use '../abstract/styles/patterns.scss' as *;
+
+*[data-wf-type="dropdown"] {
+  all: unset;
+  box-sizing: border-box;
+
+  * {
+    all: unset;
+    box-sizing: border-box;
+  }
+
+  cursor: pointer;
+  font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+  position: relative;
+
+  &[data-size="lg"] {
+    font-size: var(--lg-font-size);
+  }
+
+  &[data-size="sm"] {
+    font-size: var(--xs-font-size);
+  }
+
+  &[data-add-styles] > span[data-wf-type="dropdown-title"] {
+    font-size: var(--xm-font-size);
+    background: hsl(var(--dropdown-title-bg-color));
+    padding: .7rem;
+    color: hsl(var(--default-dropdown-color));
+  }
+
+  > span[data-wf-type="dropdown-title"] {
+    position: relative;
+  }
+
+  &[data-add-styles][aria-expanded="true"] > span[data-wf-type="dropdown-title"] {
+    background: hsl(var(--h) var(--s) 40%);
+  }
+
+  &[aria-expanded="true"] > div[data-wf-type="dropdown-content"] {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 10002;
+  }
+
+  &[data-add-styles] div[data-wf-type="dropdown-content"] {
+    top: calc(100% + var(--dropdown-menu-top-indent));
+  }
+
+  &[aria-expanded="true"] > span[data-wf-type="dropdown-title"] {
+    color: hsl(var(--h) var(--s) 80%);
+    z-index: 10001;
+  }
+
+  div[data-wf-type="dropdown-content"] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    transform: translateY(-15px);
+    top: calc(100% + .1rem);
+    transition: 
+      opacity 250ms ease-out,
+      transform 300ms ease-in-out;
+    pointer-events: none;
+    color: hsl(var(--default-dropdown-color));
+
+    background: hsl(var(--dropdown-menu-bg-color));
+    padding: var(--dropdown-menu-padding);
+    border-radius: var(--primary-border-radius);
+    box-shadow: var(--dropdown-menu-shadow);
+    min-width: var(--dropdown-menu-min-width);
+  }
+
+  div[data-wf-type="dropdown-content"] > a[data-wf-type="dropdown"],
+  div[data-wf-type="dropdown-content"] > button[data-wf-type="dropdown"] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+    position: relative;
+  }
+
+  ul[data-wf-type="dropdown-list"] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div[data-wf-type="dropdown-content"]:has(> ul[data-wf-type="dropdown-list"]) {
+    padding: 0;
+  }
+
+  ul[data-wf-type="dropdown-list"] li:not(:last-child) {
+    border-bottom: var(--primary-border);
+  }
+
+  ul[data-wf-type="dropdown-list"] li {
+    padding: calc(var(--dropdown-menu-padding) * .5);
+  }
+}

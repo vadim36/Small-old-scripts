@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+//?COLORS
+:root {
+  --h: 0;
+  --h-blue: 229;
+  --h-green: 104;
+  --h-yellow: 60;
+
+  --s-100: 100%;
+  --s-50: 50%;
+  --s: 0%;
+  
+  --l-100: 100%;
+  --l-65: 65%;
+  --l-50: 50%;
+  --l-30: 30%;
+  --l-25: 25%;
+  --l-0: 0%;
+
+  --primary-color: var(--h) var(--s) var(--l-0);
+  --secondary-color: var(--h) var(--s) var(--l-100);
+
+  --blue-color: var(--h-blue) var(--s-100) var(--l-65);
+  --green-color: var(--h-green) var(--l-100) var(--l-30);
+  --gray-color: var(--h) var(--s) var(--l-50);
+  --light-gray-color: var(--h) var(--s) var(--l-25);
+  --dark-gray-color: var(--h) var(--s) var(--l-25);
+  --yellow-color: var(--h-yellow) var(--s-100) var(--l-50);
+  --light-yellow-color: var(--h-yellow) var(--s-50) var(--l-50);
+}
+
+//?MAIN_ROOT
+:root {
+  --primary-outline: .125rem solid hsl(var(--primary-color));
+  --primary-border: var(--primary-outline);
+  --primary-border-radius: .4rem;
+  --sm-border-radius: .22rem;
+}
+
+//?TYPE_ROOT
+:root {
+  --primary-font-family: 'Roboto', sans-serif;
+  --primary-font-size: 1.565rem;
+
+  --lg-font-size: 2.567rem;
+  --xm-font-size: 1.865rem;
+  --xs-font-size: 1.378rem;
+  --sm-font-size: 1.297rem;
+}
+
+//?WAVE_BUTTON_ROOT
+:root {
+  --wave-button-width: 8.75rem;
+  --wave-button-height: 3.5rem;
+  
+  --wave-button-width-lg: calc(var(--wave-button-width) * 1.428);
+  --wave-button-height-lg: calc(var(--wave-button-height) * 1.361);
+
+  --wave-button-width-sm: calc(var(--wave-button-width) * .826);
+  --wave-button-height-sm: calc(var(--wave-button-height) * .932);
+}
+
+//?MENU_HAMBURGER_ROOT
+:root {
+  --menu-hamburger-size: 5.465rem;
+  --menu-hamburger-size-sm: calc(var(--menu-hamburger-size) * 0.765);
+  --menu-hamburger-size-lg: calc(var(--menu-hamburger-size) * 1.238);
+}
+
+//?TAB_ROOT
+:root {
+  --current-tab-color: var(--green-color);
+  --next-tab-color: var(--blue-color);
+}
+
+//?DROPDOWN_ROOT
+:root {
+  --dropdown-title-bg-color: var(--gray-color);
+  --dropdown-menu-bg-color: var(--light-gray-color);
+  --dropdown-menu-padding: .5rem;
+  --dropdown-menu-top-indent: 1.15rem;
+  --dropdown-menu-shadow: 0 2px 5px 0 hsl(var(--primary-color) / .25);
+  --dropdown-menu-min-width: 6.4rem;
+  --default-dropdown-color: var(--secondary-color);
+}
+
+//?RATING_ROOT
+:root {
+  --rating-stars-color: hsl(var(--yellow-color));
+  --hover-rating-star-color: hsl(var(--light-yellow-color));
+  --rating-non-selected-star-color: hsl(var(--gray-color));
+
+  --rating-stars-size: 3.25rem;
+  --rating-stars-size-sm: 2.7rem;
+  --rating-stars-size-lg: 4.75rem;
+
+  --rating-stars-gap: .35rem;
+
+  //?ADDITIONAL_STYLES
+  --rating-background-color: hsl(var(--dark-gray-color));
+}

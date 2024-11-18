@@ -1,0 +1,68 @@
+@use '../abstract' as var;
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+
+  > button {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: var.$ui-buttonFontSize;
+    color: rgba(255, 255, 255, .5);
+
+    background: rgba(0, 0, 0, .1);
+
+    border-radius: .25rem;
+
+    padding: 0 .5rem;
+
+    transition: background-color .25s;
+
+    &:active,
+    &:hover {
+      color: #fff;
+      background: rgba(0, 0, 0, .3);
+    }
+  }
+
+  > ul {
+    list-style: none;
+  }
+}
+
+.carousel__button-next {
+  right: 1rem;
+}
+
+.carousel__button-previous {
+  left: 1rem;
+}
+
+.carousel__slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  transition: 0.2s opacity ease-in-out;
+  transition-delay: 0.2s;
+
+  &[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}

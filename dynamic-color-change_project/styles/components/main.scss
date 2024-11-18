@@ -1,0 +1,39 @@
+@use '../abstract' as var;
+
+main {
+  background: var.$main;
+
+  section:nth-child(odd) {
+    background: var.$main;
+    color: var.$secondary;
+  }
+
+  section:nth-child(even) {
+    background: var.$secondary;
+    color: var.$main;
+  }
+}
+
+section {
+  min-height: var.$sectionHeight;
+
+  padding: var.$sectionPadding;
+  
+  @media (width < 1400px) {
+    $sectionPadding: 1rem 1rem 1rem 8.5vw;
+    padding: $sectionPadding;
+  }
+
+  @media (width < 1100px) {
+    $sectionPadding: 1rem 1rem 1rem 10vw;
+    padding: $sectionPadding;
+  }
+}
+
+.title {
+  width: var.$subtitleWidth;
+
+  margin: 0 auto;
+
+  font-size: var.$subtitleFontSize;
+}

@@ -1,0 +1,12 @@
+@use './root.scss' as *;
+
+@mixin title($font-size, $isUnderline: false) {
+  font-size: $font-size;
+  text-align: center;
+
+  padding: $titlePadding;
+
+  @if ($isUnderline == true) {
+    border-bottom: 1px solid #000;
+  }
+}
